@@ -5,12 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembukuan</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
         body {
             text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.6;
         }
         input {
             margin-bottom: 20px;
         }
+        h1 {
+            font-weight: 300;
+        }
+/* The dataa (background) */
+.dataa {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 500px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* dataa Content */
+.dataa-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
     </style>
 </head>
 <body>
@@ -21,9 +70,34 @@
     <input type="text" name="harga" id="harga"><br>
     <label for="pengali">Jumlah Barang</label><br>
     <input type="text" name="pengali" id="pengali"><br>
-    <button type="submit">Simpan</button><br>
+    <button type="submit" id="submit">Simpan</button><br>
     <footer>
         <p>copyright - open source</p>
     </footer>
+
+    <!-- pop up -->
+    <div id="dataa" class="dataa">
+        <div class="dataa-content">
+        <span class="close">&times;</span>
+        <p>Penjualan sudah dimasukkan</p>
+        </div>
+    </div>
+
+    <script>
+        var dataa = document.getElementById("dataa");
+        var btn = document.getElementById("submit");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+          dataa.style.display = "block";
+        }
+        span.onclick = function() {
+          dataa.style.display = "none";
+        }
+        window.onclick = function(event) {
+          if (event.target == dataa) {
+            dataa.style.display = "none";
+          }
+        }
+        </script>
 </body>
 </html>
