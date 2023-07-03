@@ -63,14 +63,24 @@
     </style>
 </head>
 <body>
-    <h1>Masukkan Penjualan (jenis tunggal)</h1>
-    <label for="nama">Nama Barang</label><br>
-    <input type="text" name="nama" id="nama"><br>
-    <label for="harga">Harga</label><br>
-    <input type="text" name="harga" id="harga"><br>
-    <label for="pengali">Jumlah Barang</label><br>
-    <input type="text" name="pengali" id="pengali"><br>
-    <button type="submit" id="submit">Simpan</button><br>
+    <form action="" id="formulir">
+        <h1>Masukkan Penjualan (jenis tunggal)</h1>
+        <div>
+            <label for="nama">Nama Barang</label><br>
+            <input type="text" name="nama" id="nama"><br>
+        </div>
+        <div>
+            <label for="harga">Harga</label><br>
+            <input type="text" name="harga" id="harga"><br>
+        </div>
+        <div>
+            <label for="pengali">Jumlah Barang</label><br>
+            <input type="text" name="pengali" id="pengali"><br>
+        </div>
+        <!-- <input type="button" onclick="myFunction" value="Reset"> -->
+        <button type="submit" id="submit">Simpan</button><br>
+
+    </form>
     <footer>
         <p>copyright - open source</p>
     </footer>
@@ -98,6 +108,11 @@
             dataa.style.display = "none";
           }
         }
-        </script>
+    </script>
+    <!-- <script>
+        function myFunction() {
+            document.getElementById("formulir").reset();
+        }
+    </script> -->
 </body>
 </html>
