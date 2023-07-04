@@ -1,6 +1,6 @@
 # pembukuan
 
-program ini simple. hanya memindahkan pembukuan yang biasanya pada buku tertulis di kertas ke data base komputer. bisa melalui applikasi atau pwa
+program ini simple. hanya memindahkan pembukuan yang biasanya pada buku tertulis di kertas ke data base komputer. bisa melalui applikasi mobile atau pwa
 
 tahap pengembangannya adalah :
 1. membuat kerangka kerja (sudah selesai)
@@ -10,3 +10,8 @@ tahap pengembangannya adalah :
 5. membuat webapp
 6. membuat pwa
 7. membuat mobile version
+
+
+report .html
+
+mampu menampilkan laporan bulan ini. mampu menampilkan laoran semua bulan. mampu menamapilkan laporan total 
