@@ -66,7 +66,7 @@
     </style>
 </head>
 <body>
-<!-- <form action=""> -->
+<form action="" id="formulir">
         <h1>Masukkan Penjualan (jenis tunggal)</h1>
         <div>
             <label for="nama">Nama Barang</label><br>
@@ -81,7 +81,7 @@
             <input type="text" name="pengali" id="pengali"><br>
         </div>
         <button type="submit" id="submit">Simpan</button><br>
-    <!-- </form> -->
+    </form>
     <footer>
         <p>copyright - open source</p>
     </footer>
@@ -110,5 +110,15 @@
           }
         }
     </script>
+    <script>
+        const form = document.getElementById('formulir')
+        function submitHandler(e) {
+           e.preventDefault();
+          console.log(e.target.elements.nama.value)
+          console.log(e.target.elements.harga.value)
+          console.log(e.target.elements.pengali.value)
+        }
+        form.addEventListener("submit", submitHandler)
+      </script>
 </body>
 </html>
