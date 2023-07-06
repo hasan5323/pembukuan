@@ -36,6 +36,9 @@ overflow: auto; /* Enable scroll if needed */
 background-color: rgb(0,0,0); /* Fallback color */
 background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
 }
+a {
+    text-decoration: none;
+}
 
 /* dataa Content */
 .dataa-content {
