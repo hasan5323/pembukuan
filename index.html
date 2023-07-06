@@ -26,7 +26,7 @@
         <button type="reset">Reset</button>
 
     </form>
-    <a href="report.html">Lihat laporan bulan ini</a>
+    <a href="report.html">Lihat laporan bulanan</a>
     <p id="bulan"></p>
     <a href="#">Semua Laporan</a>
 </div>
@@ -42,38 +42,8 @@
         </div>
     </div>
 
-    <script>
-        var dataa = document.getElementById("dataa");
-        var btn = document.getElementById("submit");
-        var span = document.getElementsByClassName("close")[0];
-        btn.onclick = function() {
-          dataa.style.display = "block";
-        }
-        span.onclick = function() {
-          dataa.style.display = "none";
-        }
-        window.onclick = function(event) {
-          if (event.target == dataa) {
-            dataa.style.display = "none";
-          }
-        }
-    </script>
-    <script>
-        const form = document.getElementById('formulir')
-        form.addEventListener("submit", submitHandler)
-        function submitHandler(e) {
-            e.preventDefault();
-            console.log(e.target.elements.nama.value);
-            console.log(e.target.elements.harga.value);
-            console.log(e.target.elements.pengali.value);
-        }
-      </script>
-      <script>
-        const month = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","October","November","December"];
-        
-        const d = new Date();
-        let name = month[d.getMonth()];
-        document.getElementById("bulan").innerHTML ="ini adalah bulan " + name;
-        </script>
+    <script src="submitAlert.js"></script>
+    <script src="log.js"></script>
+    <script src="month.js"></script>
 </body>
 </html>
