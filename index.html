@@ -4,70 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembukuan</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-        body {
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-        input {
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-weight: 300;
-        }
-        /* The dataa (background) */
-        .dataa {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 500px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
-        }
-
-        /* dataa Content */
-        .dataa-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 50%;
-        }
-
-        /* The Close Button */
-        .close {
-        margin-left: 15px;
-        color: black;
-        font-weight: bold;
-        float: right;
-        font-size: 22px;
-        line-height: 20px;
-        cursor: pointer;
-        transition: 0.3s;
-        }
-
-        .close:hover,
-        .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<form action="" id="formulir">
-        <h1>Masukkan Penjualan (jenis tunggal)</h1>
+    <div class="container">
+    <form action="" id="formulir">
+        <h1>Masukkan Penjualan <br>(jenis tunggal)</h1>
         <div>
             <label for="nama">Nama Barang</label><br>
             <input type="text" name="nama" id="nama"><br>
@@ -82,11 +24,14 @@
         </div>
         <button type="submit" id="submit">Simpan</button><br>
         <button type="reset">Reset</button>
-        <a href="report.html">See this month report</a>
-        <p>Name of Month</p>
+
     </form>
+    <a href="report.html">Lihat laporan bulan ini</a>
+    <p id="bulan"></p>
+    <a href="#">Semua Laporan</a>
+</div>
     <footer>
-        <p>copyright - open source</p>
+        <p>hak cipta - bebas</p>
     </footer>
 
     <!-- pop up -->
@@ -115,13 +60,20 @@
     </script>
     <script>
         const form = document.getElementById('formulir')
-        function submitHandler(e) {
-           e.preventDefault();
-          console.log(e.target.elements.nama.value)
-          console.log(e.target.elements.harga.value)
-          console.log(e.target.elements.pengali.value)
-        }
         form.addEventListener("submit", submitHandler)
+        function submitHandler(e) {
+            e.preventDefault();
+            console.log(e.target.elements.nama.value);
+            console.log(e.target.elements.harga.value);
+            console.log(e.target.elements.pengali.value);
+        }
       </script>
+      <script>
+        const month = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","October","November","December"];
+        
+        const d = new Date();
+        let name = month[d.getMonth()];
+        document.getElementById("bulan").innerHTML ="ini adalah bulan " + name;
+        </script>
 </body>
 </html>
