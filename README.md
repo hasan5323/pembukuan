@@ -15,3 +15,5 @@ tahap pengembangannya adalah :
 report .html
 
 mampu menampilkan laporan bulan ini. mampu menampilkan laoran semua bulan. mampu menamapilkan laporan total 
+
+report this should use auto update. so we must only use single page for all this month report
