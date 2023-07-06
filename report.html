@@ -1,19 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Database</title>
     <style>
-        table, th, td {
-          border: 1px solid black;
-        }
-        </style>
-</head>
-<body>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
     <h1>Total Pemasukan Bulan ini</h1>
-    <p>ada kemungkinan diubah jadi card aja biar bisa dibuka masing masingnya ke laporan bulan tsb</p>
+    <p>
+      ada kemungkinan diubah jadi card aja biar bisa dibuka masing masingnya ke
+      laporan bulan tsb
+    </p>
 
     <table>
       <thead>
@@ -24,31 +28,12 @@
           <th>Total Harga</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Madu</td>
-          <td>3</td>
-          <td>Rp54.000</td>
-          <td>harga diatas kali jumlah barang</td>
-        </tr>
-        <tr>
-            <td>Sirup</td>
-            <td>2</td>
-            <td>Rp30.000</td>
-            <td>harga diatas kali jumlah barang</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-            <td>Beng-Beng</td>
-            <td>5</td>
-            <td>Rp2.500</td>
-            <td>harga diatas kali jumlah barang</td>
-        </tr>
-      </tfoot>
+      <tbody id="table-body"></tbody>
     </table>
     <div class="button">
-        <a href="index.html">Kembali Ke halaman input</a>
+      <a href="index.html">Kembali Ke halaman input</a>
     </div>
-</body>
+
+    <script src="report.js"></script>
+  </body>
 </html>

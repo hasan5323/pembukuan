@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pembukuan</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main class="container">
-    <form action="" id="formulir">
-        <h1>Masukkan Penjualan <br>(jenis tunggal)</h1>
+      <form action="" id="formulir">
+        <h1>Masukkan Penjualan <br />(jenis tunggal)</h1>
         <div>
-            <label for="nama">Nama Barang</label><br>
-            <input type="text" name="nama" id="nama"><br>
+          <label for="nama">Nama Barang</label><br />
+          <input type="text" name="nama" id="nama" /><br />
         </div>
         <div>
-            <label for="harga">Harga</label><br>
-            <input type="text" name="harga" id="harga"><br>
+          <label for="harga">Harga</label><br />
+          <input type="number" name="harga" id="harga" /><br />
         </div>
         <div>
-            <label for="pengali">Jumlah Barang</label><br>
-            <input type="text" name="pengali" id="pengali"><br>
+          <label for="pengali">Jumlah Barang</label><br />
+          <input type="number" name="pengali" id="pengali" /><br />
         </div>
-        <button type="submit" id="submit">Simpan</button><br>
+        <button type="submit" id="submit">Simpan</button><br />
         <button type="reset">Reset</button>
-
-    </form>
-    <a href="report.html">Lihat laporan bulanan ini</a>
-    <p id="bulan"></p>
-    <a href="database.html">Semua Laporan</a>
+      </form>
+      <a href="report.html">Lihat laporan bulanan ini</a>
+      <p id="bulan"></p>
+      <a href="database.html">Semua Laporan</a>
     </main>
     <footer>
-        <p>hak cipta - Pembukuan.com - bebas</p>
+      <p>hak cipta - Pembukuan.com - bebas</p>
     </footer>
     <aside>
-        <!-- pop up -->
-        <div id="dataa" class="dataa">
-            <div class="dataa-content">
-            <span class="close">&times;</span>
-            <p>Penjualan sudah dimasukkan</p>
-            </div>
+      <!-- pop up -->
+      <div id="dataa" class="dataa">
+        <div class="dataa-content">
+          <span class="close">&times;</span>
+          <p id="alert-message"></p>
         </div>
+      </div>
 
-        <script src="submitAlert.js"></script>
-        <script src="log.js"></script>
-        <script src="month.js"></script>
+      <!-- <script src="submitAlert.js"></script>
+      <script src="log.js"></script> -->
+      <script src="month.js"></script>
+      <script src="main.js"></script>
     </aside>
-</body>
+  </body>
 </html>
